@@ -1,0 +1,23 @@
+    
+#search{
+	background: grey;
+	font-family: 'times new roman', sans-serif;
+	font-size: 30px;
+	position: center;
+}
+
+header{
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: #202364;
+	color: white;
+}
+
+#classToAdd{
+	background-color: yellow;
+
+}
+
+.btn {
+	margin-left: 20px;
+}
