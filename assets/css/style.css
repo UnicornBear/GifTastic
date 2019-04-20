@@ -1,4 +1,14 @@
-    
+html, body {
+	background-color: black;
+}
+
+.container {
+	clear: both;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+  }
+
 #search{
 	background: grey;
 	font-family: 'times new roman', sans-serif;
@@ -7,7 +17,8 @@
 }
 
 header{
-	margin-bottom: 20px;
+	font-size: 50px;
+	margin-bottom: 25px;
 	text-align: center;
 	background-color: #202364;
 	color: white;
@@ -18,6 +29,19 @@ header{
 
 }
 
-.btn {
+.btn, #giphyArea {
+    border-radius: 12px;
+    background-color: #263959;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 10px 5px 0;
+}
+
+.search-item {
+	float: left;
 	margin-left: 20px;
 }
+
