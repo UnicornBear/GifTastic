@@ -7,14 +7,14 @@ $(document).ready(function() {
 var searchArray = ['superman','batman','green goblin','deadpool','wolverine','stormtrooper'];
 
 // create button function
-function createButtons(searchArray, classToAdd, areaToAddTo){
-    $(areaToAddTo).empty();
+function createButtons(searchArray, classToAdd, giphyArea){
+    $('#giphyArea').empty();
     for (var i=0; i<searchArray.length; i++){
-        var a = $('<button type="button" class="btn btn-success">');
-        a.addClass(classToAdd);
-        a.attr('data-type',searchArray[i]);
-        a.text(searchArray[i]);
-        $(areaToAddTo).append(a);
+        var button = $('<button type="button" class="btn btn-success">');
+            button.addClass(classToAdd);
+            button.attr('data-type',searchArray[i]);
+            button.text(searchArray[i]);
+        $('#giphyArea').append(button);
     }
 }
 
@@ -38,6 +38,7 @@ $(document).on('click','.searchButton',function(){
             var rating = response.data[i].rating;
             // var shortURL = response.data[i].bitly_url;
             var p = $('<p>').text('rating: '+rating);
+                p.addClass('rating');
             // var q = $('<p>').text('URL: '+ shortURL);
             //collect animated and still version of the giphy
             var still = response.data[i].images.fixed_width_still.url;
@@ -48,11 +49,12 @@ $(document).on('click','.searchButton',function(){
                 image.attr('data-animate',animated);
                 image.attr('data-state','still');
                 image.addClass('searchImage');
-                image.addClass("rounded", "rounded float-left");    
+                // image.addClass("rounded", "rounded float-left");    
+                image.addClass('')
 
             searchDiv.append(p);
             searchDiv.append(image);
-            $('#searches').append(searchDiv);
+            $('#giphyReturn').append(searchDiv);
         }
     })
 })
@@ -64,6 +66,7 @@ $('#addSearch').on('click',function() {
     createButtons(searchArray, 'searchButton', '#giphyArea');
     return false;   
 })
+
 
 
 // When the user clicks on a picture, this will either start or stop the animation of that picture.  
@@ -80,4 +83,22 @@ $(document).on('click','.searchImage',function(){
 })
 
 
+
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
 

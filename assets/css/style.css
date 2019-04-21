@@ -2,46 +2,49 @@ html, body {
 	background-color: black;
 }
 
-.container {
-	clear: both;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 960px;
-  }
-
-#search{
-	background: grey;
-	font-family: 'times new roman', sans-serif;
-	font-size: 30px;
-	position: center;
+#header {
+	text-align: center;
+	color: white;
+	background: black;
+	font-size: 40px;
+	margin-bottom: 15px;
 }
 
-header{
-	font-size: 50px;
-	margin-bottom: 25px;
-	text-align: center;
-	background-color: #202364;
+.row{
+	background: black;
+}
+
+#banner {
+	background-image: url('../images/banner.jpg');
+    background-repeat: no-repeat;
+	background-position: center center;
+	height:200px;
+}
+
+.rating {
 	color: white;
 }
 
-#classToAdd{
-	background-color: yellow;
-
-}
-
-.btn, #giphyArea {
-    border-radius: 12px;
-    background-color: #263959;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 12px;
-    margin: 10px 5px 0;
+.btn {
+    margin: 0px 5px 5px;
 }
 
 .search-item {
 	float: left;
 	margin-left: 20px;
 }
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+	padding-top: 102px;
+  }
+
 
