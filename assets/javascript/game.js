@@ -4,7 +4,7 @@ $(document).ready(function() {
 });
 
 
-var searchArray = ['superman','batman','green goblin','deadpool','wolverine','stormtrooper'];
+var searchArray = ['workaholics','workaholics season','blake henderson','adam demamp','anders holmvik','alice murphy','jillian belk'];
 
 // create button function
 function createButtons(searchArray, classToAdd, giphyArea){
