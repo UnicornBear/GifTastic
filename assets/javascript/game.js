@@ -48,8 +48,7 @@ $(document).on('click','.searchButton',function(){
                 image.attr('data-still',still); 
                 image.attr('data-animate',animated);
                 image.attr('data-state','still');
-                image.addClass('searchImage');
-                // image.addClass("rounded", "rounded float-left");    
+                image.addClass('searchImage');   
                 image.addClass('')
 
             searchDiv.append(p);
