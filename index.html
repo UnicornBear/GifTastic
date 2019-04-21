@@ -9,31 +9,45 @@
 	<link href="assets/css/style.css" rel="stylesheet">
 	<!-- bootstrap link - 4.18.2019 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Subrayada|Warnes" rel="stylesheet">
+
+	<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
 </head>
 	
-<body>
+	<body>
 
-	<header class="neon">Name to be named later</header>
-<div class="container">
-	<div id="giphyArea"> </div>
+		<div class="container-fluid">
 
-	<form id="search">
-		<div class="form-group">
-			<label for="search-input">Add in your Search </label>
-			<input type="text" id="search-input"> 
-			<input type="submit" id="addSearch" value="Submit" class="btn btn-primary"> 
-		</div>
-	</form>
-
-	<div id="searches"> </div>
-</div>
-
-
-	<!-- jquery script  -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+			<div id="header" class="col-lg-12">WORKAHOLICS GIPHY BREAK</div>
+			<!-- <p>this is a PC to Gotta-Let-Loose rating gpihy stop</p> -->
+			<!-- <p>	A ONETIME STOP SHOP FOR A GIPHY TO SPEAK FOR YOU</p> -->
 			
-</body>
+
+			<div class="row" class="header" id="myHeader">
+
+				<div id="giphyArea" class="col-sm-4"> </div>
+				<div id="banner" class="col-sm-5"></div>
+
+				<form id="search" class="col-sm-3">
+						<div class="form-group">
+							<input class="col-sm-8" type="text" id="search-input" placeholder="giphy group"> 
+							<input class="col-sm-3" type="submit" id="addSearch" value="ADD" class="btn btn-primary"> 
+						</div>
+						<div id="giphyMyArea"> </div>
+					</form>
+
+			</div>
+			
+
+			<div id="giphyReturn"> </div>
+
+		</div>
+
+
+		<!-- jquery script  -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+				
+	</body>
 </html>
  
